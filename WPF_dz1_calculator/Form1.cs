@@ -214,6 +214,10 @@ namespace WPF_dz1_calculator
 				}
 
 			}
+			if (Convert.ToDecimal(tb_tablo.Text, nfi) == 0)
+			{
+				tb_tablo.Text = "0";
+			}
 		}
 		private void btn_division_Click(object sender, EventArgs e)
 		{
