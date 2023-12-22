@@ -23,6 +23,10 @@ namespace WPF_dz1_calculator
 			//Ввод 123456789 первой цифрой
 			if (temp != "Error" && oper !='=')
 			{
+				if (temp.Length <=15)
+				{
+
+
 				if (symbol != "0" && symbol != "." && temp.Length == 1 && temp[0] == '0')
 				{
 					tb_tablo.Text = symbol;
@@ -42,7 +46,8 @@ namespace WPF_dz1_calculator
 				{
 					tb_tablo.Text += symbol;
 				}
-				//ввод первого 0 не нужен
+					//ввод первого 0 не нужен
+				}
 			}
 			else
 			{
@@ -164,24 +169,50 @@ namespace WPF_dz1_calculator
 			}
 			if (oper =='*')
 			{
-				oper = '=';
-				toHistory(tb_tablo.Text);
-				decimal result = firstOprand * Convert.ToDecimal(tb_tablo.Text, nfi);
-				tb_tablo.Text = Convert.ToString(result, nfi);
+				try
+				{
+					oper = '=';
+					toHistory(tb_tablo.Text);
+					decimal result = firstOprand * Convert.ToDecimal(tb_tablo.Text, nfi);
+					tb_tablo.Text = Convert.ToString(result, nfi);
+				}
+				catch (Exception)
+				{
+
+					tb_tablo.Text = "Error";
+				}
+
 			}
 			if (oper == '-')
 			{
-				oper = '=';
-				toHistory(tb_tablo.Text);
-				decimal result = firstOprand - Convert.ToDecimal(tb_tablo.Text, nfi);
-				tb_tablo.Text = Convert.ToString(result, nfi);
+				try
+				{
+					oper = '=';
+					toHistory(tb_tablo.Text);
+					decimal result = firstOprand - Convert.ToDecimal(tb_tablo.Text, nfi);
+					tb_tablo.Text = Convert.ToString(result, nfi);
+				}
+				catch (Exception)
+				{
+					tb_tablo.Text = "Error";
+				}
+
 			}
 			if (oper == '+')
 			{
-				oper = '=';
-				toHistory(tb_tablo.Text);
-				decimal result = firstOprand + Convert.ToDecimal(tb_tablo.Text, nfi);
-				tb_tablo.Text = Convert.ToString(result, nfi);
+				try
+				{
+					oper = '=';
+					toHistory(tb_tablo.Text);
+					decimal result = firstOprand + Convert.ToDecimal(tb_tablo.Text, nfi);
+					tb_tablo.Text = Convert.ToString(result, nfi);
+				}
+				catch (Exception)
+				{
+
+					tb_tablo.Text = "Error";
+				}
+
 			}
 		}
 		private void btn_division_Click(object sender, EventArgs e)
