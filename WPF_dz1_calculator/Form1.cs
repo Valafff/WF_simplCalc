@@ -13,6 +13,7 @@ namespace WPF_dz1_calculator
 {
 	public partial class Calculator_form : Form
 	{
+		NumberFormatInfo nfi = new CultureInfo("en-US", false).NumberFormat;
 		decimal firstOprand;
 		char oper;
 		void anyBtnClick(string symbol)
@@ -140,7 +141,6 @@ namespace WPF_dz1_calculator
 
 		private void btn_plus_minus_Click(object sender, EventArgs e)
 		{
-			NumberFormatInfo nfi = new CultureInfo("en-US", false).NumberFormat;
 			decimal temp = Convert.ToDecimal(tb_tablo.Text, nfi) * -1;
 			tb_tablo.Text = Convert.ToString(temp, nfi);
 		}
@@ -154,8 +154,8 @@ namespace WPF_dz1_calculator
 				toHistory(tb_tablo.Text);
 				try
 				{
-					decimal result = firstOprand / Convert.ToDecimal(tb_tablo.Text);
-					tb_tablo.Text = Convert.ToString(result);
+					decimal result = firstOprand / Convert.ToDecimal(tb_tablo.Text, nfi);
+					tb_tablo.Text = Convert.ToString(result, nfi);
 				}
 				catch (Exception)
 				{
@@ -166,22 +166,22 @@ namespace WPF_dz1_calculator
 			{
 				oper = '=';
 				toHistory(tb_tablo.Text);
-				decimal result = firstOprand * Convert.ToDecimal(tb_tablo.Text);
-				tb_tablo.Text = Convert.ToString(result);
+				decimal result = firstOprand * Convert.ToDecimal(tb_tablo.Text, nfi);
+				tb_tablo.Text = Convert.ToString(result, nfi);
 			}
 			if (oper == '-')
 			{
 				oper = '=';
 				toHistory(tb_tablo.Text);
-				decimal result = firstOprand - Convert.ToDecimal(tb_tablo.Text);
-				tb_tablo.Text = Convert.ToString(result);
+				decimal result = firstOprand - Convert.ToDecimal(tb_tablo.Text, nfi);
+				tb_tablo.Text = Convert.ToString(result, nfi);
 			}
 			if (oper == '+')
 			{
 				oper = '=';
 				toHistory(tb_tablo.Text);
-				decimal result = firstOprand + Convert.ToDecimal(tb_tablo.Text);
-				tb_tablo.Text = Convert.ToString(result);
+				decimal result = firstOprand + Convert.ToDecimal(tb_tablo.Text, nfi);
+				tb_tablo.Text = Convert.ToString(result, nfi);
 			}
 		}
 		private void btn_division_Click(object sender, EventArgs e)
@@ -189,7 +189,7 @@ namespace WPF_dz1_calculator
 			if (oper != '/')
 			{
 				if (oper != '=') { toHistory(tb_tablo.Text); }
-				firstOprand = Convert.ToDecimal(tb_tablo.Text);
+				firstOprand = Convert.ToDecimal(tb_tablo.Text, nfi);
 				toHistory("/");
 				tb_tablo.Text = "0";
 				oper = '/';
@@ -201,7 +201,7 @@ namespace WPF_dz1_calculator
 			if (oper != '*')
 			{
 				if (oper != '=') { toHistory(tb_tablo.Text); }
-				firstOprand = Convert.ToDecimal(tb_tablo.Text);
+				firstOprand = Convert.ToDecimal(tb_tablo.Text, nfi);
 				toHistory("*");
 				tb_tablo.Text = "0";
 				oper = '*';
@@ -214,7 +214,7 @@ namespace WPF_dz1_calculator
 			if (oper != '-')
 			{
 				if (oper != '=') { toHistory(tb_tablo.Text); }
-				firstOprand = Convert.ToDecimal(tb_tablo.Text);
+				firstOprand = Convert.ToDecimal(tb_tablo.Text, nfi);
 				toHistory("-");
 				tb_tablo.Text = "0";
 				oper = '-';
@@ -227,7 +227,7 @@ namespace WPF_dz1_calculator
 			if (oper != '+')
 			{
 				if (oper != '=') { toHistory(tb_tablo.Text); }
-				firstOprand = Convert.ToDecimal(tb_tablo.Text);
+				firstOprand = Convert.ToDecimal(tb_tablo.Text, nfi);
 				toHistory("+");
 				tb_tablo.Text = "0";
 				oper = '+';
