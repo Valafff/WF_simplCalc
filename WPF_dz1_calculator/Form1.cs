@@ -122,7 +122,7 @@ namespace WF_dz1_calculator
 		public Calculator_form()
 		{
 			InitializeComponent();
-			//7. Подписываю метод на событие MagicKlacKlac
+			//7. Подписываю метод MagicKlacKlac на событие 
 			KeyBoard_Key_Press += MagicKlacKlac;
 		}
 		void anyBtnClick(string symbol)
