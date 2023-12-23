@@ -19,7 +19,7 @@ namespace WF_dz1_calculator
 
 	public partial class Calculator_form : Form
 	{
-		// 3. Создаю событие OnKeyBoardPrees на основе делегата KeyBoardDelegat из п.2
+		// 3. Создаю событие OnKeyBoardPress на основе делегата KeyBoardDelegat из п.2
 		public event KeyBoardDelegat KeyBoard_Key_Press;
 		// 4. Создаю метод, который принимает экземпляр класса KeyPressEvent
 		void PressKey(KeyPressEvent e)
@@ -37,7 +37,7 @@ namespace WF_dz1_calculator
 			PressKey(new KeyPressEvent() { message = msg, KeyData = keyData });
 			return base.ProcessCmdKey(ref msg, keyData);
 		}
-		//6. В метод Form1_Press_Key передаю событие с данными о нажатой клавише, обрабатываю событие
+		//6. В метод MagicKlacKlac передаю событие с данными о нажатой клавише, обрабатываю событие
 		private void MagicKlacKlac(object sender, KeyPressEvent e)
 		{
 			if (e.KeyData == Keys.Enter)
@@ -170,15 +170,14 @@ namespace WF_dz1_calculator
 			tb_history.Text += symbol;
 		}
 
-		private void btn_0_Click(object sender, EventArgs e)
-		{
-			anyBtnClick("0");
-			fake.Focus();
-		}
-
 		private void btn_dot_Click(object sender, EventArgs e)
 		{
 			anyBtnClick(".");
+			fake.Focus();
+		}
+		private void btn_0_Click(object sender, EventArgs e)
+		{
+			anyBtnClick("0");
 			fake.Focus();
 		}
 
