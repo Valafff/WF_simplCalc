@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_dz1", "WPF_dz1\WPF_dz1.csproj", "{1C7351A5-D3FE-4ED1-8709-8948CA9DEE0F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WF_dz1", "WPF_dz1\WF_dz1.csproj", "{1C7351A5-D3FE-4ED1-8709-8948CA9DEE0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_dz1_calculator", "WPF_dz1_calculator\WPF_dz1_calculator.csproj", "{0F589A32-3DC3-46B5-B820-46C93984DE5C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WF_dz1_calculator", "WPF_dz1_calculator\WF_dz1_calculator.csproj", "{0F589A32-3DC3-46B5-B820-46C93984DE5C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

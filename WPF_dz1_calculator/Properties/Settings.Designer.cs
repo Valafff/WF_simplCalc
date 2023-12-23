@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WPF_dz1_calculator.Properties
+namespace WF_dz1_calculator.Properties
 {
 
 

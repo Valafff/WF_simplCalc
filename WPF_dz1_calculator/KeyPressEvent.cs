@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WPF_dz1_calculator
+namespace WF_dz1_calculator
 {
 	public class KeyPressEvent
 	{

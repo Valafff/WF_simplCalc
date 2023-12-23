@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WPF_dz1_calculator
+namespace WF_dz1_calculator
 {
 	internal static class Program
 	{

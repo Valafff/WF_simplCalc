@@ -1,4 +1,4 @@
-﻿namespace WPF_dz1_calculator
+﻿namespace WF_dz1_calculator
 {
 	partial class Calculator_form
 	{

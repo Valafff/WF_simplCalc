@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WPF_dz1_calculator
+namespace WF_dz1_calculator
 {
 	//ОБРАБОТКА НАЖАТИЯ КЛАВИШ!
 	//1. Создаю класс KeyPressEvent где будет храниться значение данных клавиши и Message(хрен знает за чем, идет прицепом)
